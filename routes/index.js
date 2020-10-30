@@ -6,4 +6,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Node JS world!' });
 });
 
+router.get('/health_check', function (req, res, next) {
+  res.status(200).send('health check success!');
+});
+
 module.exports = router;
